@@ -1,10 +1,10 @@
 # myelinSlider
 jquery slider plugin
 
-————-
-“`
-var i = 0
-“`
-
-var foo = “bar”
-<html> </html>
+# Sample
+'''
+$('.main_banner').myelinSlider({
+	auto : true,
+	speed : 4000
+});
+'''
