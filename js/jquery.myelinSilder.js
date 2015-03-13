@@ -14,9 +14,6 @@
 		   var args = [].slice.call( arguments, 1, 3); //배열의 slice() 메서드를 빌려 쓴다. 
 		   return args; 
 		} 
-		console.log( f(1, 2, 3, 4, 5, 6) ); 
-		
-		// console.log(obj);
 		
 		function Elems(){};												// 객체 생성
 		var firstOnBoolean;												//	전역변수 생성
