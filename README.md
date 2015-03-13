@@ -1,0 +1,2 @@
+# myelinSlider
+jquery slider plugin
