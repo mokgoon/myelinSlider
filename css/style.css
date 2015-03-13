@@ -9,7 +9,7 @@ img, select, input, button { vertical-align:middle; }
 
 body{background:#E3E5E6;}
 div#section{}
-div.main_banner{
+div.banner{
 	overflow:hidden; 
 	width:708px; 
 	height:272px; 
@@ -18,8 +18,9 @@ div.main_banner{
 	border:1px solid #ccc;
 }
 	
-div.main_banner ul.m_banner_con{float:left;}
-div.main_banner ul.m_banner_txt{float:right; margin-top:5px; text-align: left; width:192px;}
-div.main_banner ul.m_banner_txt > li{padding-left:18px; padding-right:1px; border-bottom:1px solid #e3e5e6; line-height:31px;}
-div.main_banner ul.m_banner_txt > li.on{background:url(../img/icon_bullet.png) no-repeat 0 center; font-weight:bold;}
+div.banner ul.m_banner_con{float:left;}
+div.banner ul.m_banner_txt{float:right; margin-top:5px; text-align: left; width:192px;}
+div.banner ul.m_banner_txt > li{padding-left:18px; padding-right:1px; border-bottom:1px solid #e3e5e6; line-height:32px;}
+div.banner ul.m_banner_txt > li:last-child{border-bottom:0px;}
+div.banner ul.m_banner_txt > li.on{background:url(../img/icon_bullet.png) no-repeat 0 center; font-weight:bold;}
 
