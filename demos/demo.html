@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="no-js">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Myelin Slider jQuery Plugin</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="../css/style.css">
+		<script type="text/javascript" src="../js/jquery-1.9.1.min.js" ></script>
+		<script type="text/javascript" src="../js/jquery.myelinSilder.js"></script>
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<script>
+			$(document).ready(function() {
+				
+				 $('.main_banner').myelinSlider({
+					 auto : true,
+					 speed : 4000
+				 });
+				
+			});
+			
+		</script>
+	</head>
+	<body>
+		<div class="main_banner">
+			<ul class="m_banner_con">
+				<li><a href="#none" id="mb01" style="display:"><img src="../img/m_c_img01.gif" alt="" /></a></li>
+				<li><a href="#none" id="mb02" style="display:none"><img src="../img/m_c_img02.gif" alt="" /></a></li>
+				<li><a href="#none" id="mb03" style="display:none"><img src="../img/m_c_img03.gif" alt="" /></a></li>
+				<li><a href="#none" id="mb04" style="display:none"><img src="../img/m_c_img04.gif" alt="" /></a></li>
+				<li><a href="#none" id="mb05" style="display:none"><img src="../img/m_c_img05.gif" alt="" /></a></li>
+				<li><a href="#none" id="mb06" style="display:none"><img src="../img/m_c_img06.gif" alt="" /></a></li>
+				<li><a href="#none" id="mb07" style="display:none"><img src="../img/m_c_img07.gif" alt="" /></a></li>
+			</ul>
+			<ul class="m_banner_txt">
+				<li><a href="#none" class="mb01">SC은행 주택담보 대출</a></li>
+				<li><a href="#none" class="mb02">IBK기업은행 퀴즈이벤트</a></li>
+				<li><a href="#none" class="mb03">현대백화점 추가할인</a></li>
+				<li><a href="#none" class="mb04">티처웰 출석하면 상품이~팡!</a></li>
+				<li><a href="#none" class="mb05">모두투어 조기할인</a></li>
+				<li><a href="#none" class="mb06">쇼핑 공동구매</a></li>
+				<li><a href="#none" class="mb07">폭스바겐 교직원 프로모션</a></li>
+			</ul>
+		</div>
+	</body>
+</html>
+
