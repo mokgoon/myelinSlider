@@ -10,6 +10,8 @@
 	
 	$.fn.myelinSlider = function(obj){
 		
+		console.log(this);
+		
 		function f() { 
 		   var args = [].slice.call( arguments, 1, 3); //배열의 slice() 메서드를 빌려 쓴다. 
 		   return args; 
@@ -84,6 +86,7 @@
 							$(con.dataTxt).eq(0).addClass('on'); 
 							$('#'+con.targetImg[0].id).show();
 						}else{
+							// console.log($('#'+con.targetImg[k].id));
 							$('#'+con.targetImg[k].id).show();
 						}
 					}
