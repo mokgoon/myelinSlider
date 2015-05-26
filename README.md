@@ -1,6 +1,14 @@
 # myelinSlider
 jquery slider plugin
 
+# HTML Markup
+```html
+$('.banner').myelinSlider({
+	auto : true,
+	speed : 4000
+});
+```
+
 # Code
 ```javascript
 $('.banner').myelinSlider({
