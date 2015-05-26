@@ -1,5 +1,5 @@
 /*
-* 	MyelinSlider v0.7
+*  MyelinSlider v0.7
 *  Mokgoon 2014.04.25
 *  mokgoon@gmail.com
 *  http://www.mokgoon.com
@@ -9,11 +9,44 @@
 (function($){
 	
 	$.fn.myelinSlider = function(obj){
+		var firstOnBoolean,
+			autoSlider,
+			defaults,
+			add,
+			con,
+			slideImg,		// 슬라이드 이미지 객체
+			slideImgLen,	// 슬라이드 이미지 갯수
+			slideHtm,		// 슬라이드 텍스트 태그
+			slideA,
+			cnt = 1;
 
-		var firstOnBoolean, autoSlider, defaults, add, con;
+		slideImg = $(this).find('img');
+		slideA= $(this).find('a');
+		slideImgLen = $(this).find('li').length;
 
-		function f() { 
-		   var args = [].slice.call( arguments, 1, 3); //배열의 slice() 메서드를 빌려 쓴다. 
+		slideHtml = '<ul class="banner-txt"></ul>';
+		$(this).append(slideHtml);
+
+		function createLi(){
+			var slideLi = '<li></li>';
+
+			for(var i = 0; i < slideImgLen; i++){
+				var aL = creadteAlink($(slideImg)[i].alt);
+				$('.banner-txt').append(slideLi);
+				$('.banner-txt li').eq(i).append(aL);
+				cnt++;
+			}
+		}
+
+		function creadteAlink(t){
+			var aLink = '<a href="#none" class="mb'+cnt+'">'+t+'</a>';
+			return aLink;
+		}
+
+		createLi();
+
+		function f() {
+		   var args = [].slice.call( arguments, 1, 3);
 		   return args; 
 		}
 
@@ -97,7 +130,6 @@
 							$(con.dataTxt).eq(0).addClass('on'); 
 							$('#'+con.targetImg[0].id).show();
 						}else{
-							// console.log($('#'+con.targetImg[k].id));
 							$('#'+con.targetImg[k].id).show();
 						}
 					}
