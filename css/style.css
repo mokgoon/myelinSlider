@@ -10,8 +10,8 @@ img, select, input, button { vertical-align:middle; }
 body{background:#E3E5E6;}
 
 div#section{
-	width:808px;
-	margin:250px auto 0; 
+	width:90%;
+	margin:10px auto 0;
 }
 
 div.banner{
