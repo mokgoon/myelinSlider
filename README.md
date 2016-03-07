@@ -21,6 +21,7 @@ jquery slider plugin
 ```javascript
 $('.banner').myelinSlider({
 	auto : true,
+	type : 'content'
 	speed : 4000
 });
 ```
