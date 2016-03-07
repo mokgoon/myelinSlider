@@ -26,5 +26,12 @@ $('.banner').myelinSlider({
 });
 ```
 
+# Option
+```javascript
+	auto : true, false
+	type : 'content' , 'slideshow'
+	speed : 0
+```
+
 # Sample
 http://mokgoon.github.io/myelinSlider/demos/demo.html
