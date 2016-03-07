@@ -35,47 +35,55 @@
 		slideImgLen = $(this).find('li').length;
 
 		if(obj.type === 'content'){
+			console.log('content');
 	        // content style 
-			slideHtml = '<ul class="banner-txt"></ul>';
+			slideHtml = '<ul class="content-txt"></ul>';
 			$(this).append(slideHtml);
 	
-			function createLi(){
+			function contentCreateLi(){
+				
 				var slideLi = '<li></li>';
 	
-				for(var i = 0; i < slideImgLen; i++){							// 에러???
-					var aL = creadteAlink($(slideImg)[i].alt);
-					$('.banner-txt').append(slideLi);
-					$('.banner-txt li').eq(i).append(aL);
+				for(var i = 0; i < slideImgLen; i++){							
+					var aL = creadteAlink($(slideImg)[i].alt, slideA[i].id);
+					$('.content-txt').append(slideLi);
+					$('.content-txt li').eq(i).append(aL);
 					cnt++;
 				}
 			}
+			contentCreateLi();
 		}
 
 
 		if(obj.type === 'slideshow'){
+			console.log('slideshow');
 			// slide show style
-			slideHtml = '<div class="slide_tab"><ul class="banner-txt"></ul></div>';
+			slideHtml = '<div class="slide_tab"><ul class="slideshow-txt"></ul></div>';
 			$(this).append(slideHtml);
 	
-			function createLi(){
+			function slideshowCreateLi(){
 				var slideLi = '<li></li>';
 	
-				for(var i = 0; i < slideImgLen; i++){							// 에러???
-					var aL = creadteAlink($(slideImg)[i].alt);
-					$('.banner-txt').append(slideLi);
-					$('.banner-txt li').eq(i).append(aL);
+				for(var i = 0; i < slideImgLen; i++){
+					
+					console.log(slideA[i].id);
+												
+					var aL = creadteAlink($(slideImg)[i].alt, slideA[i].id);
+					$('.slideshow-txt').append(slideLi);
+					$('.slideshow-txt li').eq(i).append(aL);
 					cnt++;
 				}
 			}
+			slideshowCreateLi();
 		}
 		
 		
-		function creadteAlink(t){
-			var aLink = '<a href="#none" class="mb'+cnt+'">'+t+'</a>';
+		function creadteAlink(t, _id){
+			var aLink = '<a href="#none" class="'+_id+'">'+t+'</a>';
 			return aLink;
 		}
 
-		createLi();
+		
 
 		function f() {
 			var args = [].slice.call( arguments, 1, 3);
@@ -111,11 +119,12 @@
 		
 		if(obj.type === 'slideshow'){
 			add.item = this.children().eq(1).children().eq(0).children().length;
+			console.log(add.item);
 			add.dataTxt = this.children().eq(1).children().eq(0).children();
 		}
 		
 		if(obj.type === 'content'){
-			add.item = this.children().eq(1).children().length;
+			add.item = this.children().eq(0).children().length;
 			add.dataTxt = this.children().eq(1).children();
 		}
 		
@@ -159,7 +168,7 @@
 
 				if($(con.dataTxt).hasClass('on')){$(con.dataTxt).removeClass('on');}
 				$(this).addClass('on');
-				var tagetNm = $(this).children()[0].className;
+				var tagetNm = $(this).children()[0].className; 
 
 				for(var i = 0; i < con.dataImgLen; i++){
 					if(tagetNm == con.targetImg[i].id){
@@ -201,13 +210,15 @@
 			
 			
 		}
+/*
 
 		function getScreenHeight(){
 			var eleHeight = $('.banner').css('height');
 			$('.banner-img > li > a > img').css('height',eleHeight);
 		}
 
-		getScreenHeight();
+		getScreenHeight();*/
+
 
 	}
 
