@@ -15,6 +15,7 @@
 	 *  slideshow
 	 * 
 	 */
+	
 
 	$.fn.myelinSlider = function(obj){
 		var firstOnBoolean,
@@ -127,7 +128,6 @@
 		
 		
 		// 텍스트 첫번째에 on 클래스가 있는지 확인
-		
 		if(obj.type === 'slideshow'){
 			firstOnBoolean = $(con.dataTxt).children().eq(0).hasClass('on');
 		}
